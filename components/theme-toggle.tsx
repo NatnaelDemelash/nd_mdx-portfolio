@@ -1,12 +1,12 @@
 'use client'
 
-import { useTheme } from 'next-themes'
-import { Button } from './ui/button'
 import { useEffect, useState } from 'react'
+import { useTheme } from 'next-themes'
 
+import { Button } from '@/components/ui/button'
 import { MoonIcon, SunIcon } from '@radix-ui/react-icons'
 
-const ThemeToggle = () => {
+export function ThemeToggle() {
   const { setTheme, resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
@@ -15,7 +15,7 @@ const ThemeToggle = () => {
   }, [])
 
   if (!mounted) {
-    return false
+    return null
   }
 
   return (
@@ -32,9 +32,7 @@ const ThemeToggle = () => {
         <MoonIcon className='size-4 text-sky-950' />
       )}
 
-      <span className='sr-only'>Toggle Theme</span>
+      <span className='sr-only'>Toggle theme</span>
     </Button>
   )
 }
-
-export default ThemeToggle

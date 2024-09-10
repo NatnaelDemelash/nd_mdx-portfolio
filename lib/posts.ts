@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import matter from 'gray-matter'
+const matter = require('gray-matter')
 
 const rootDirectory = path.join(process.cwd(), 'content', 'posts')
 

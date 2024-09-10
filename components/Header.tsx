@@ -12,7 +12,7 @@ const Header = () => {
         </div>
         <ul className='flex items-center gap-6 text-sm font-light text-muted-foreground'>
           <li className='transition-colors hover:text-foreground'>
-            <Link href='/notes'>Notes</Link>
+            <Link href='/posts'>Posts</Link>
           </li>
           <li className='transition-colors hover:text-foreground'>
             <Link href='/projects'>Projects</Link>

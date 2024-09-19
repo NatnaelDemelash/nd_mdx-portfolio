@@ -1,4 +1,5 @@
 import Intro from '@/components/Intro'
+import RecentPosts from '@/components/RecentPosts'
 import Image from 'next/image'
 
 export default function Home() {
@@ -6,6 +7,8 @@ export default function Home() {
     <section className='py-24'>
       <div className='container max-w-3xl'>
         <Intro />
+
+        <RecentPosts />
       </div>
     </section>
   )

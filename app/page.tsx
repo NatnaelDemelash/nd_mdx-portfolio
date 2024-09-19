@@ -1,5 +1,6 @@
 import Intro from '@/components/Intro'
 import RecentPosts from '@/components/RecentPosts'
+import RecentProjects from '@/components/RecentProjects'
 import Image from 'next/image'
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
         <Intro />
 
         <RecentPosts />
+        <RecentProjects />
       </div>
     </section>
   )

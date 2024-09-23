@@ -8,7 +8,7 @@ import Provider from '@/components/Provider'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
-const quickSand = Quicksand({ weight: '400', subsets: ['latin'] })
+const quickSand = Quicksand({ subsets: ['latin'] })
 // const playfair = Playfair_Display({
 //   subsets: ['latin'],
 //   variable: '--font-serif'
@@ -26,12 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' suppressHydrationWarning>
-      <body
-        className={cn(
-          'flex min-h-screen flex-col font-sans antialiased',
-          quickSand.className
-        )}
-      >
+      <body className={quickSand.className}>
         <Provider>
           <Header />
           <main className='grow'>{children}</main>

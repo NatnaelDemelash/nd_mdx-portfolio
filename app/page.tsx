@@ -1,8 +1,8 @@
-import Experience from '@/components/Experience '
+import Contact from '@/components/Contact'
+import Experience from '@/components/Experience'
 import Intro from '@/components/Intro'
 import RecentPosts from '@/components/RecentPosts'
 import RecentProjects from '@/components/RecentProjects'
-import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -12,6 +12,7 @@ export default function Home() {
         <RecentPosts />
         <RecentProjects />
         <Experience />
+        <Contact />
       </div>
     </section>
   )

@@ -48,7 +48,7 @@ export default function Footer() {
           <span className='text-[#8e44ad]'> Digital presence</span> to the next
           level?
         </h1>
-        <p className='text-white-200 my-5 px-6 text-center text-lg leading-6 md:mt-10'>
+        <p className='text-white-200 text- my-5 px-6 text-center leading-6 md:mt-10'>
           Feel free to get in touch, and let&apos;s chat about how can I support
           you in reaching your goals.
         </p>

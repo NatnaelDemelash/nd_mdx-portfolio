@@ -15,7 +15,7 @@ const Intro = () => {
         <Image
           className='flex-1 rounded-lg grayscale'
           src={profile}
-          alt='Hamed Bahram'
+          alt='Profile pic'
           width={205}
           height={205}
           priority

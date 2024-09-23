@@ -8,7 +8,7 @@ import Provider from '@/components/Provider'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
-const kanit = Quicksand({ weight: '400', subsets: ['latin'] })
+const quickSand = Quicksand({ weight: '400', subsets: ['latin'] })
 // const playfair = Playfair_Display({
 //   subsets: ['latin'],
 //   variable: '--font-serif'
@@ -29,7 +29,7 @@ export default function RootLayout({
       <body
         className={cn(
           'flex min-h-screen flex-col font-sans antialiased',
-          kanit.className
+          quickSand.className
         )}
       >
         <Provider>

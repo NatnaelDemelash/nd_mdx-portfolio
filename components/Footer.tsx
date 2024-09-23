@@ -1,4 +1,6 @@
 import { JSX, SVGProps } from 'react'
+import { FaLocationArrow } from 'react-icons/fa'
+import { Button } from './ui/button'
 
 const navigation = [
   {
@@ -40,6 +42,24 @@ const navigation = [
 export default function Footer() {
   return (
     <footer className='py-8'>
+      <div className='mb-5 flex flex-col items-center pb-6'>
+        <h1 className='max-w-3xl text-center text-2xl font-bold md:text-4xl'>
+          Ready to take Your
+          <span className='text-[#8e44ad]'> Digital presence</span> to the next
+          level?
+        </h1>
+        <p className='text-white-200 my-5 px-6 text-center text-lg leading-6 md:mt-10'>
+          Feel free to get in touch, and let&apos;s chat about how can I support
+          you in reaching your goals.
+        </p>
+
+        <a href='mailto:natnael.dev101@gmail.com'>
+          <Button className='flex items-center gap-3'>
+            <span>Let&apos;s get in touch</span>
+            <FaLocationArrow />
+          </Button>
+        </a>
+      </div>
       <div className='container max-w-3xl'>
         <div className='md:flex md:items-center md:justify-between'>
           <div className='flex justify-center space-x-6 md:order-2'>

@@ -10,14 +10,17 @@ const Experience = () => {
       <h2 className='title mb-12'>Experience</h2>
       <div>
         {EXPERIENCES.map((experience, index) => (
-          <div key={index} className='mb-4 flex flex-wrap lg:justify-center'>
+          <div
+            key={index}
+            className='mb-4 flex flex-wrap space-x-8 lg:justify-center'
+          >
             <motion.div
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
-              className='w-full lg:w-1/4'
+              className='w-full lg:w-[20%]'
             >
-              <p className='mb-2 mt-2 text-[.6rem] text-neutral-400'>
+              <p className='mb-2 mt-2 text-[.8rem] font-bold text-neutral-400'>
                 {experience.year}
               </p>
             </motion.div>

@@ -3,6 +3,7 @@ import Experience from '@/components/Experience'
 import Intro from '@/components/Intro'
 import RecentPosts from '@/components/RecentPosts'
 import RecentProjects from '@/components/RecentProjects'
+import Skills from '@/components/Skills'
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <Intro />
         <RecentPosts />
         <RecentProjects />
+        <Skills />
         <Experience />
         <Contact />
       </div>

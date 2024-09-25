@@ -1,8 +1,5 @@
 import type { Metadata } from 'next'
 import { Quicksand } from 'next/font/google'
-
-import { cn } from '@/lib/utils'
-
 import './globals.css'
 import Provider from '@/components/Provider'
 import Header from '@/components/Header'
@@ -10,10 +7,6 @@ import Footer from '@/components/Footer'
 import Head from 'next/head'
 
 const quickSand = Quicksand({ subsets: ['latin'] })
-// const playfair = Playfair_Display({
-//   subsets: ['latin'],
-//   variable: '--font-serif'
-// })
 
 export const metadata: Metadata = {
   title: 'Natnael Demelash',
@@ -28,7 +21,7 @@ export default function RootLayout({
   return (
     <>
       <Head>
-        <link rel='icon' href='/favicon.png' />
+        <link rel='icon' href='./favicon.png' />
       </Head>
       <html lang='en' suppressHydrationWarning>
         <body className={quickSand.className}>

@@ -11,7 +11,6 @@ const skills = [
   { name: 'Next.js', icon: '/stacks/nextjs.svg' },
   { name: 'Git', icon: './stacks/git.svg' },
   { name: 'NPM', icon: '/stacks/npm-wordmark.svg' },
-  { name: 'Git', icon: '/stacks/github.svg' },
   { name: 'Redux', icon: './stacks/redux.svg' },
   { name: 'Vue', icon: './stacks/vuejs.svg' },
   { name: 'Sass', icon: './stacks/sass-wordmark.svg' },
@@ -25,8 +24,14 @@ const Skills = () => {
         <h2 className='title mb-12'>Skills</h2>
         <div className='flex flex-wrap justify-center space-x-6 space-y-4 leading-relaxed'>
           {skills.map(skill => (
-            <div key={skill.name} className=''>
-              <Image src={skill.icon} alt={skill.name} width={50} height={50} />
+            <div key={skill.name} className='group'>
+              <Image
+                src={skill.icon}
+                alt={skill.name}
+                width={50}
+                height={50}
+                className='transition-transform duration-300 group-hover:scale-125'
+              />
             </div>
           ))}
         </div>

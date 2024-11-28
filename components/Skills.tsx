@@ -20,20 +20,28 @@ const skills = [
 const Skills = () => {
   return (
     <section className='pb-24'>
+      <h2 className='title mb-12'>My Skills</h2>
       <div>
-        <h2 className='title mb-12'>Skills</h2>
-        <div className='flex flex-wrap justify-center space-x-6 space-y-4 leading-relaxed'>
-          {skills.map(skill => (
-            <div key={skill.name} className='group'>
-              <Image
-                src={skill.icon}
-                alt={skill.name}
-                width={50}
-                height={50}
-                className='transition-transform duration-300 group-hover:scale-125'
-              />
-            </div>
-          ))}
+        <div className='mx-auto max-w-6xl px-6'>
+          <div className='grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4'>
+            {skills.map(skill => (
+              <div
+                key={skill.name}
+                className='group flex flex-col items-center justify-center rounded-lg bg-white p-3 shadow-lg transition-shadow duration-300 hover:shadow-xl dark:bg-neutral-900'
+              >
+                <Image
+                  src={skill.icon}
+                  alt={skill.name}
+                  width={40}
+                  height={40}
+                  className='transition-transform duration-300 group-hover:scale-110'
+                />
+                <p className='mt-3 text-sm font-medium text-gray-700 hover:font-medium dark:text-white/55 dark:group-hover:text-white'>
+                  {skill.name}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

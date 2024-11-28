@@ -4,8 +4,6 @@ import Intro from '@/components/Intro'
 import RecentPosts from '@/components/RecentPosts'
 import RecentProjects from '@/components/RecentProjects'
 import Skills from '@/components/Skills'
-import { Button } from '@/components/ui/button'
-import { BookmarkIcon } from '@radix-ui/react-icons'
 
 export default function Home() {
   return (

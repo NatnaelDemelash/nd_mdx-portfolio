@@ -2,46 +2,78 @@ import Image from 'next/image'
 import React from 'react'
 
 const skills = [
-  { name: 'HTML', icon: '/stacks/html.svg' },
-  { name: 'CSS', icon: '/stacks/css.svg' },
-  { name: 'TailwindCSS', icon: '/stacks/tailwind.svg' },
-  { name: 'Javascript', icon: '/stacks/js.svg' },
-  { name: 'React', icon: '/stacks/reactjs.svg' },
-  { name: 'Typescript', icon: '/stacks/ts.svg' },
-  { name: 'Next.js', icon: '/stacks/nextjs.svg' },
-  { name: 'Git', icon: './stacks/git.svg' },
-  { name: 'NPM', icon: '/stacks/npm-wordmark.svg' },
-  { name: 'Redux', icon: './stacks/redux.svg' },
-  { name: 'Vue', icon: './stacks/vuejs.svg' },
-  { name: 'Sass', icon: './stacks/sass-wordmark.svg' },
-  { name: 'Framer', icon: './stacks/framer-motion.svg' }
+  {
+    name: 'TypeScript',
+    icon: '/stacks/ts.svg',
+    description: 'JavaScript but better',
+    bg: 'bg-blue-100'
+  },
+  {
+    name: 'React',
+    icon: '/stacks/reactjs.svg',
+    description: 'JavaScript Library',
+    bg: 'bg-cyan-100'
+  },
+  {
+    name: 'Next.js',
+    icon: '/stacks/nextjs.svg',
+    description: 'React framework',
+    bg: 'bg-gray-200 dark:bg-gray-700'
+  },
+  {
+    name: 'Tailwind',
+    icon: '/stacks/tailwind.svg',
+    description: 'CSS framework',
+    bg: 'bg-sky-100'
+  },
+  {
+    name: 'Git',
+    icon: '/stacks/git.svg',
+    description: 'Version control',
+    bg: 'bg-orange-100'
+  },
+  {
+    name: 'Supabase',
+    icon: '/stacks/supabase.svg',
+    description: 'Backend tool',
+    bg: 'bg-green-100'
+  }
 ]
 
 const Skills = () => {
   return (
     <section className='pb-24'>
       <h2 className='title mb-12'>My Skills</h2>
-      <div>
-        <div className='mx-auto max-w-6xl px-6'>
-          <div className='grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4'>
-            {skills.map(skill => (
+      <div className='mx-auto max-w-6xl px-6'>
+        <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3'>
+          {skills.map(skill => (
+            <div
+              key={skill.name}
+              className='flex items-center rounded-xl bg-white px-5 py-4 shadow-md transition-shadow duration-300 hover:shadow-lg dark:bg-neutral-900'
+            >
+              {/* Icon with background shadow */}
               <div
-                key={skill.name}
-                className='group flex flex-col items-center justify-center rounded-lg bg-white p-3 shadow-lg transition-shadow duration-300 hover:shadow-xl dark:bg-neutral-900'
+                className={`flex h-12 w-12 items-center justify-center rounded-xl ${skill.bg}`}
               >
                 <Image
                   src={skill.icon}
                   alt={skill.name}
-                  width={40}
-                  height={40}
+                  width={28}
+                  height={28}
                   className='transition-transform duration-300 group-hover:scale-110'
                 />
-                <p className='mt-3 text-sm font-medium text-gray-700 hover:font-medium dark:text-white/55 dark:group-hover:text-white'>
+              </div>
+              {/* Text content */}
+              <div className='ml-4 flex flex-col'>
+                <h3 className='text-sm font-semibold text-gray-800 dark:text-white'>
                   {skill.name}
+                </h3>
+                <p className='text-xs tracking-tight text-gray-500 dark:text-gray-400'>
+                  {skill.description}
                 </p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

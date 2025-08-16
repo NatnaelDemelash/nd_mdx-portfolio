@@ -7,7 +7,7 @@ import { DownloadIcon } from '@radix-ui/react-icons'
 const Header = () => {
   return (
     <header className='fixed inset-x-0 top-0 z-50 bg-background/90 py-6 backdrop-blur'>
-      <nav className='container flex max-w-3xl items-center justify-between'>
+      <nav className='container flex max-w-4xl items-center justify-between'>
         <div>
           <Link href='/' className='font-serif text-xl font-bold'>
             <span>Dev🔸</span>

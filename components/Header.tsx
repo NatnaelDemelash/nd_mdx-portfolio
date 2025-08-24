@@ -3,6 +3,7 @@ import { ThemeToggle } from './theme-toggle'
 import { Button } from './ui/button'
 import { FaLocationArrow } from 'react-icons/fa'
 import { DownloadIcon } from '@radix-ui/react-icons'
+import { CommandMenu } from './command-menu'
 
 const Header = () => {
   return (
@@ -30,6 +31,7 @@ const Header = () => {
           <span>Resume</span>
           <DownloadIcon />
         </Button>
+        <CommandMenu />
         <div>
           <ThemeToggle />
         </div>

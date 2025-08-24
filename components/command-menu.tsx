@@ -11,7 +11,9 @@ import {
   LayersIcon,
   BriefcaseBusinessIcon,
   SearchCheckIcon,
-  Search
+  Search,
+  HomeIcon,
+  QrCode
 } from 'lucide-react'
 
 import {
@@ -24,6 +26,8 @@ import {
   CommandSeparator
 } from '@/components/ui/command'
 import { Button } from '@/components/ui/button'
+import { SiCodesandbox } from 'react-icons/si'
+import { CodeSandboxLogoIcon } from '@radix-ui/react-icons'
 
 export function CommandMenu() {
   const [open, setOpen] = useState(false)
@@ -51,8 +55,8 @@ export function CommandMenu() {
     <>
       {/* Trigger button for header */}
       <Button
-        variant='secondary'
-        className='flex h-8 items-center gap-2 rounded-full px-3'
+        variant='ghost'
+        className='flex h-8 items-center gap-2 rounded-full border border-muted-foreground px-3'
         onClick={() => setOpen(true)}
       >
         <span className='text-lg'>
@@ -72,6 +76,10 @@ export function CommandMenu() {
 
           {/* Navigation */}
           <CommandGroup heading='Navigation'>
+            <CommandItem onSelect={() => handleSelect('/')}>
+              <QrCode className='mr-2 h-4 w-4' />
+              NatiDev
+            </CommandItem>
             <CommandItem onSelect={() => handleSelect('/posts')}>
               <RssIcon className='mr-2 h-4 w-4' />
               Posts
@@ -88,6 +96,7 @@ export function CommandMenu() {
 
           <CommandSeparator />
 
+          {/* Theme */}
           {/* Theme */}
           <CommandGroup heading='Theme'>
             <CommandItem

@@ -64,7 +64,7 @@ export function CommandMenu() {
         </span>
 
         <kbd className='rounded bg-muted px-1.5 py-0.5 font-mono text-xs font-semibold text-muted-foreground'>
-          Ctrl + K
+          Ctrl K
         </kbd>
       </Button>
 

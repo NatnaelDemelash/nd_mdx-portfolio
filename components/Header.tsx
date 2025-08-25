@@ -27,9 +27,12 @@ const Header = () => {
           className='flex items-center gap-3'
           size={'sm'}
           variant={'link'}
+          asChild
         >
-          <span>Resume</span>
-          <DownloadIcon />
+          <Link href='/resume'>
+            <span>Resume</span>
+            <DownloadIcon />
+          </Link>
         </Button>
         <CommandMenu />
         <div className='hiden lg:block'>

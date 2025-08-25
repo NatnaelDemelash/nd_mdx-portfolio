@@ -17,7 +17,7 @@ const ROTATING_CONTENT = [
   },
   {
     icon: <Zap size={32} className='text-emerald-400' />,
-    text: 'Workflow Automation with n8n'
+    text: 'Workflow Automation with(n8n, Zapier, ...)'
   },
   {
     icon: <BrainCircuit size={32} className='text-emerald-400' />,
@@ -63,7 +63,7 @@ const RotatingText = () => {
             {item.icon}
           </div>
           {/* 6. The text with the golden gradient */}
-          <span className='bg-gradient-to-r from-[#ab8a51] via-[#d6ae77] to-[#A68A64] bg-clip-text text-left text-xl font-bold text-transparent md:text-2xl'>
+          <span className='bg-gradient-to-r from-[#ab8a51] via-[#d6ae77] to-[#A68A64] bg-clip-text text-left text-base font-bold text-transparent md:text-lg'>
             {item.text}
           </span>
         </div>

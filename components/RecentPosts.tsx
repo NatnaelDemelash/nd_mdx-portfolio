@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 import { getPosts } from '@/lib/posts'
 import Posts from './Posts'
 
@@ -7,15 +8,25 @@ export default async function RecentPosts() {
 
   return (
     <section className='pb-24'>
-      <div>
-        <h2 className='title mb-12'>Recent posts</h2>
-        <Posts posts={posts} />
+      <div className='mb-12'>
+        <h2 className='title mb-12'>Recent Posts</h2>
+      </div>
 
+      {posts && posts.length > 0 ? (
+        <Posts posts={posts} />
+      ) : (
+        <p className='text-center text-muted-foreground'>
+          No posts yet — check back soon!
+        </p>
+      )}
+
+      <div className='mt-10 flex justify-center'>
         <Link
           href='/posts'
-          className='mt-8 inline-flex items-center gap-2 text-muted-foreground underline decoration-1 underline-offset-2 transition-colors hover:text-foreground'
+          className='inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium text-muted-foreground transition hover:bg-accent hover:text-foreground'
         >
-          <span>All posts</span>
+          <span>View all posts</span>
+          <ArrowRight className='h-4 w-4' />
         </Link>
       </div>
     </section>

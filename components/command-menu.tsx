@@ -10,9 +10,7 @@ import {
   RssIcon,
   LayersIcon,
   BriefcaseBusinessIcon,
-  SearchCheckIcon,
   Search,
-  HomeIcon,
   QrCode
 } from 'lucide-react'
 

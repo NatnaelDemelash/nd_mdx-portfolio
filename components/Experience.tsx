@@ -18,8 +18,6 @@ const Experience = () => {
       <h2 className='title mb-12'>Experience</h2>
       <div className='relative ml-4 md:ml-6'>
         {' '}
-        {/* Add relative positioning and left margin */}
-        {/* The main timeline line */}
         <div className='absolute inset-y-0 left-0 w-px bg-neutral-300 dark:bg-neutral-800' />
         {EXPERIENCES.map((experience: ExperienceType, index: number) => (
           <div

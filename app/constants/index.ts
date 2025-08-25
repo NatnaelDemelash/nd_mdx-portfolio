@@ -29,7 +29,7 @@ export const EXPERIENCES: Experience[] = [
   },
   {
     year: 'FEB 2021 - DEC 2023',
-    role: 'Operations Team Lead',
+    role: 'IT Support',
     company: 'GoodayOn',
     description: [
       'Led the operations team while driving process improvements across multiple projects.',
@@ -38,6 +38,16 @@ export const EXPERIENCES: Experience[] = [
       'Collaborated with cross-functional teams to ensure smooth project execution and delivery.'
     ],
     technologies: ['Jira', 'Trello', 'Jira Automation']
+  },
+  {
+    role: 'Junior Web Developer',
+    company: 'AAU(Internship)',
+    year: 'MAY 2019 - JUL 2019',
+    description: [
+      'Cooperated with designers to create clean interfaces and simple, intuitive interactions and experiences.',
+      'Developed project concepts and maintained optimal workflow.',
+      'Worked with senior developers to manage large, complex design projects for corporate clients.'
+    ]
   }
 ]
 

@@ -22,7 +22,7 @@ const resumeData = {
     {
       role: 'IT Support',
       company: 'GoodayOn',
-      year: 'August 2020 - November 2023',
+      year: 'Feburary 2021 - December 2023',
       location: 'Addis Ababa',
       description: [
         'Acted as the first point of contact for all IT & technical queries and managed Active Directory assets including user accounts and devices.',

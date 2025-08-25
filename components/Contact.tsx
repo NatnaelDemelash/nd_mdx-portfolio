@@ -4,11 +4,14 @@ import { FaLocationArrow } from 'react-icons/fa'
 
 const Contact = () => {
   return (
-    <div className='flex flex-col items-center pb-6 md:mt-32'>
-      <h1 className='max-w-3xl text-center text-2xl md:text-4xl'>
+    <div className='flex flex-col items-center pb-6 md:mt-36'>
+      <h1 className='max-w-4xl text-center text-2xl md:text-4xl'>
         Ready to take Your
-        <span className='text-green-500'> Digital presence</span> to the next
-        level?
+        <span className='bg-gradient-to-r from-[#ab8a51] via-[#d6ae77] to-[#A68A64] bg-clip-text text-transparent'>
+          {' '}
+          Digital presence
+        </span>{' '}
+        to the next level?
       </h1>
       <p className='text-white-200 text- my-5 px-6 text-center leading-6 md:mt-10'>
         Feel free to get in touch, and let&apos;s chat about how can I support

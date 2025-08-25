@@ -6,7 +6,7 @@ import React from 'react'
 
 const Experience = () => {
   return (
-    <div className='mb-10 md:mb-20'>
+    <div className='mb-10 md:mb-32'>
       <h2 className='title mb-12'>Experience</h2>
       <div>
         {EXPERIENCES.map((experience, index) => (
@@ -32,7 +32,7 @@ const Experience = () => {
             >
               <h6 className='mb-2 text-2xl font-semibold'>
                 {experience.role} -{' '}
-                <span className='text-xs text-green-500'>
+                <span className='bg-gradient-to-r from-[#ab8a51] via-[#d6ae77] to-[#A68A64] bg-clip-text text-xs font-bold text-transparent'>
                   {experience.company}
                 </span>
               </h6>

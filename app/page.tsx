@@ -8,7 +8,7 @@ import Skills from '@/components/Skills'
 export default function Home() {
   return (
     <section className='py-24'>
-      <div className='container max-w-4xl'>
+      <div className='container mx-auto max-w-4xl space-y-20 px-4 xl:max-w-6xl'>
         <Intro />
         <RecentPosts />
         <Skills />

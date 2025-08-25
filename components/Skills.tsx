@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import React from 'react'
 
 const skills = [
   {
@@ -49,9 +48,9 @@ const skills = [
 const Skills = () => {
   return (
     <section id='skills' className='pb-24'>
-      <h2 className='title mb-12'>My Skills</h2>
-      <div className='mx-auto max-w-6xl px-6'>
-        <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3'>
+      <h2 className='title mb-12'>Stacks</h2>
+      <div className='mx-auto max-w-6xl'>
+        <div className='grid grid-cols-2 gap-6 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4'>
           {skills.map(skill => (
             <div
               key={skill.name}

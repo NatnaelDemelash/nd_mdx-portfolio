@@ -16,12 +16,19 @@ const Experience = () => {
   return (
     <div className='mb-16 md:mb-32'>
       <h2 className='title mb-12'>Experience</h2>
-      <div className='space-y-4'>
+      <div className='relative ml-4 md:ml-6'>
+        {' '}
+        {/* Add relative positioning and left margin */}
+        {/* The main timeline line */}
+        <div className='absolute inset-y-0 left-0 w-px bg-neutral-300 dark:bg-neutral-800' />
         {EXPERIENCES.map((experience: ExperienceType, index: number) => (
           <div
             key={index}
-            className='border-b border-neutral-200 pb-4 last:border-b-0 dark:border-neutral-800'
+            className='relative mb-6 flex flex-col pl-6 last:mb-0' // Added pl-6 and relative positioning
           >
+            {/* The timeline dot */}
+            <div className='absolute left-0 top-6 h-3 w-3 -translate-x-1/2 rounded-full border-2 border-neutral-300 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-900' />
+
             {/* Header */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}

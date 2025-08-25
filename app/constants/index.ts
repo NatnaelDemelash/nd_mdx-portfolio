@@ -11,32 +11,44 @@ import {
   SiRedux
 } from 'react-icons/si'
 
-export const EXPERIENCES = [
+import { Experience, Project } from '@/app/types'
+
+export const EXPERIENCES: Experience[] = [
   {
     year: 'JAN 2024 - Present',
     role: 'Software Engineer',
     company: 'GoodayOn',
-    description: `Contributing to the development of web applications using JavaScript, Vue.js, and React.js. Worked closely other developers to prioritize features and enhancements.`,
-    technologies: ['Vue', 'Tailwind', 'React', 'Firebase']
+    description: [
+      'Designing and building internal tools that improve daily operations and team productivity.',
+      'Creating smart AI-driven automations and workflows using n8n to reduce repetitive tasks.',
+      'Developing custom Slack integrations for real-time collaboration and alerts.',
+      'Engineering seamless integrations across different platforms to streamline business processes.',
+      'Contributing to modern web applications with React, Vue, and Tailwind, ensuring responsive and maintainable code.'
+    ],
+    technologies: ['React', 'Vue', 'Tailwind', 'Firebase', 'n8n', 'Slack API']
   },
   {
     year: 'FEB 2021 - DEC 2023',
-    role: 'Operation Team Lead',
+    role: 'Operations Team Lead',
     company: 'GoodayOn',
-    description: `Successfully utilize CRM software tools, including Trello and Jira, to streamline and
-      enhance project management processes.`
-    // technologies: ['Vue', 'Firebase'],
+    description: [
+      'Led the operations team while driving process improvements across multiple projects.',
+      'Implemented automations in Jira to optimize workflows and reduce manual effort.',
+      'Utilized Trello and Jira to manage projects, track progress, and improve team efficiency.',
+      'Collaborated with cross-functional teams to ensure smooth project execution and delivery.'
+    ],
+    technologies: ['Jira', 'Trello', 'Jira Automation']
   }
 ]
 
-export const PROJECTS = [
+export const PROJECTS: Project[] = [
   {
     num: '01',
     category: 'frontend',
     title: 'Puluk Travel',
     description:
       'Fully responsive modern UI/UX Website with Next.js for Travel and Camping App',
-    tech: [SiTypescript, SiNextdotjs, SiTailwindcss] as IconType[],
+    tech: [SiTypescript, SiNextdotjs, SiTailwindcss],
     demo: 'https://puluk-travel.vercel.app',
     githubLink: 'https://github.com/NatnaelDemelash/puluk_travel',
     cover: '/images/projects/Project-1.png',
@@ -47,8 +59,8 @@ export const PROJECTS = [
     category: 'frontend',
     title: 'Pizzeria Pizza',
     description:
-      'Pizza ordering website .Users can browse through a variety of pizza options, select their preferred menu',
-    tech: [SiReact, SiReactquery, SiTailwindcss] as IconType[],
+      'Pizza ordering website. Users can browse through a variety of pizza options, select their preferred menu',
+    tech: [SiReact, SiReactquery, SiTailwindcss],
     demo: 'https://pizzeria101.netlify.app/',
     githubLink: 'https://github.com/NatnaelDemelash/pizzeria_pizza',
     cover: '/images/projects/Project-2.png',
@@ -60,22 +72,10 @@ export const PROJECTS = [
     title: 'OmniFood',
     description:
       '[Cloned website] An AI based tech company which majorly focuses on consumer well-being through a healthy diet.',
-    tech: [SiHtml5, SiCss3, SiJavascript] as IconType[],
+    tech: [SiHtml5, SiCss3, SiJavascript],
     demo: 'https://loquacious-haupia-108385.netlify.app/',
     githubLink: 'https://github.com/NatnaelDemelash/OmniFood',
     cover: '/images/projects/Project-3.png',
     background: 'bg-indigo-500'
   }
-  // {
-  //   num: '04',
-  //   category: 'frontend',
-  //   title: 'Aurora Aisel',
-  //   description:
-  //     'An Ecommerce app built with React.js using react context -( FakeStore API) for data fetching/backend',
-  //   tech: [SiReact, SiRedux, SiTailwindcss, SiReactquery] as IconType[],
-  //   demo: 'https://aurora-aisel-shop.vercel.app',
-  //   githubLink: 'https://github.com/NatnaelDemelash/aurora_aisel_shop',
-  //   cover: '/images/projects/Project-4.png',
-  //   background: 'bg-[#F0B27A]'
-  // }
 ]

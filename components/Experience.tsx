@@ -1,45 +1,104 @@
 'use client'
 
 import { EXPERIENCES } from '@/app/constants'
-import { motion } from 'framer-motion'
-import React from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import React, { useState } from 'react'
+import { FaChevronDown } from 'react-icons/fa'
+import { Experience as ExperienceType } from '@/app/types'
 
 const Experience = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
+
+  const toggleOpen = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index)
+  }
+
   return (
-    <div className='mb-10 md:mb-32'>
+    <div className='mb-16 md:mb-32'>
       <h2 className='title mb-12'>Experience</h2>
-      <div>
-        {EXPERIENCES.map((experience, index) => (
+      <div className='space-y-4'>
+        {EXPERIENCES.map((experience: ExperienceType, index: number) => (
           <div
             key={index}
-            className='mb-4 flex flex-wrap space-x-8 lg:justify-center'
+            className='border-b border-neutral-200 pb-4 last:border-b-0 dark:border-neutral-800'
           >
+            {/* Header */}
             <motion.div
-              initial={{ opacity: 0, x: -100 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
-              className='w-full lg:w-[20%]'
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className='flex cursor-pointer items-center justify-between rounded-lg p-4 transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800'
+              onClick={() => toggleOpen(index)}
             >
-              <p className='mb-2 mt-2 text-[.8rem] font-bold text-neutral-400'>
-                {experience.year}
-              </p>
+              <div>
+                <h6 className='text-lg font-semibold text-neutral-900 dark:text-neutral-100'>
+                  {experience.role}{' '}
+                  <span className='ml-1 bg-gradient-to-r from-[#8B4513] via-[#D2B48C] to-[#C0A180] bg-clip-text text-sm font-bold text-transparent dark:from-[#ab8a51] dark:via-[#d6ae77] dark:to-[#A68A64]'>
+                    @{experience.company}
+                  </span>
+                </h6>
+                <p className='mt-1 font-mono text-xs text-neutral-500 dark:text-neutral-400'>
+                  {experience.year}
+                </p>
+              </div>
+
+              <motion.div
+                initial={false}
+                animate={{ rotate: openIndex === index ? 180 : 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <FaChevronDown className='text-neutral-400 dark:text-neutral-500' />
+              </motion.div>
             </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 100 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
-              className='w-full lg:w-[75%]'
-            >
-              <h6 className='mb-2 text-2xl font-semibold'>
-                {experience.role} -{' '}
-                <span className='bg-gradient-to-r from-[#ab8a51] via-[#d6ae77] to-[#A68A64] bg-clip-text text-xs font-bold text-transparent'>
-                  {experience.company}
-                </span>
-              </h6>
-              <p className='mb-4 text-sm dark:text-white/40'>
-                {experience.description}
-              </p>
-            </motion.div>
+
+            {/* Expandable Content */}
+            <AnimatePresence initial={false}>
+              {openIndex === index && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className='overflow-hidden pl-5 pr-4 md:pl-9'
+                >
+                  {/* Description */}
+                  <ul className='list-disc space-y-2 pt-4 text-[0.9rem] leading-relaxed text-neutral-700 marker:text-[#8B4513] dark:text-white/70 dark:marker:text-[#d6ae77]'>
+                    {experience.description.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+
+                  {/* Technologies */}
+                  {experience.technologies && (
+                    <motion.div
+                      className='mt-4 flex flex-wrap gap-2'
+                      initial='hidden'
+                      animate='visible'
+                      variants={{
+                        hidden: { opacity: 0 },
+                        visible: {
+                          opacity: 1,
+                          transition: { staggerChildren: 0.1 }
+                        }
+                      }}
+                    >
+                      {experience.technologies.map((tech, i) => (
+                        <motion.span
+                          key={i}
+                          variants={{
+                            hidden: { opacity: 0, y: 10 },
+                            visible: { opacity: 1, y: 0 }
+                          }}
+                          className='rounded-full bg-neutral-200 px-3 py-1 text-xs font-medium text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300'
+                        >
+                          {tech}
+                        </motion.span>
+                      ))}
+                    </motion.div>
+                  )}
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         ))}
       </div>

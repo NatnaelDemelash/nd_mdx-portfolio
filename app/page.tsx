@@ -7,8 +7,8 @@ import Skills from '@/components/Skills'
 
 export default function Home() {
   return (
-    <section className='py-24'>
-      <div className='container mx-auto max-w-4xl space-y-20 px-4 xl:max-w-6xl'>
+    <main className='py-24'>
+      <div className='container mx-auto max-w-4xl space-y-24 px-4 sm:px-6 lg:space-y-32 lg:px-8 xl:max-w-6xl'>
         <Intro />
         <RecentPosts />
         <Skills />
@@ -16,6 +16,6 @@ export default function Home() {
         <Experience />
         <Contact />
       </div>
-    </section>
+    </main>
   )
 }
